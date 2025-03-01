@@ -1,19 +1,26 @@
 {
   "name": "bank-api-nodejs",
-  "version": "0.0.0",
-  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
   "scripts": {
-    "start": "node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node src/routes/app.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luixmartins/bank-api-nodejs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luixmartins/bank-api-nodejs/issues"
+  },
+  "homepage": "https://github.com/luixmartins/bank-api-nodejs#readme",
+  "description": "",
   "dependencies": {
-    "@sequelize/core": "^7.0.0-alpha.42",
     "@sequelize/mysql": "^7.0.0-alpha.45",
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "express": "^4.21.2",
+    "sequelize": "^6.37.5"
   }
 }
