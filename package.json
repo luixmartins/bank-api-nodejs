@@ -15,12 +15,13 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/luixmartins/bank-api-nodejs/issues"
-  }, 
+  },
   "type": "module",
   "homepage": "https://github.com/luixmartins/bank-api-nodejs#readme",
   "description": "",
   "dependencies": {
     "@sequelize/mysql": "^7.0.0-alpha.45",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "sequelize": "^6.37.5"
   }
