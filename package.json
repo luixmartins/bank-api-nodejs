@@ -3,26 +3,38 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/routes/app.js"
+    "dev": "tsx watch src/http/server.ts",
+    "test": "vitest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luixmartins/bank-api-nodejs.git"
+    "url": "git+https://github.com/luixmartins/user-auth-api.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/luixmartins/bank-api-nodejs/issues"
+    "url": "https://github.com/luixmartins/user-auth-api/issues"
   },
-  "type": "module",
-  "homepage": "https://github.com/luixmartins/bank-api-nodejs#readme",
+  "homepage": "https://github.com/luixmartins/user-auth-api#readme",
   "description": "",
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.9",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  },
   "dependencies": {
     "@sequelize/mysql": "^7.0.0-alpha.45",
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "sequelize": "^6.37.5"
+    "jsonwebtoken": "^9.0.2",
+    "sequelize": "^6.37.5",
+    "uuid": "^11.1.0",
+    "vitest": "^3.0.7"
   }
 }
