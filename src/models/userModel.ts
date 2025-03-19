@@ -18,6 +18,34 @@ const emailRegex: RegExp = /^(?=.{1,254}$)(?=.{1,64}@)[-!#$%&'*+/0-9=?A-Z^_`a-z{
 class UserModel { 
     private props: User; 
 
+    get id() { 
+        return this.props.id; 
+    }
+
+    get user_type() { 
+        return this.props.user_type; 
+    }
+
+    get name() { 
+        return this.props.name; 
+    }
+
+    get email() { 
+        return this.props.email; 
+    }
+
+    get password() { 
+        return this.props.password; 
+    }
+
+    get document_number() { 
+        return this.props.name; 
+    }
+
+    get created_at() { 
+        return this.props.created_at; 
+    }
+
     constructor(props: User) { 
         if(emailRegex.test(props.email) === false) { 
             throw new Error('Invalid email'); 

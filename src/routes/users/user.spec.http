@@ -1,0 +1,15 @@
+GET http://localhost:3000/user
+Content-Type: 'application/json' 
+
+###
+
+POST http://localhost:3000/user/create_user
+Content-Type: 'application/json'
+
+{ 
+    "user_type": "individual",
+    "name": "Luiz Martins", 
+    "email": "luiz@gmail.com", 
+    "password": "@Ziul*69", 
+    "document_number": "19837819547" 
+}

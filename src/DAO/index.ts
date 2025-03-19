@@ -5,10 +5,10 @@ import sequelize from '../config/database';
 interface ResponseFromDatabase {
     status: number;
     message: string;
-    body?: object; 
+    body?: object;
 }
 
-const errorMessage = (error: any) => { 
+const errorMessage = (error: any) => {
     return error instanceof Error ? error.message : "Unknown error occurred";
 }
 
@@ -28,7 +28,7 @@ const DAO = {
             } catch (error) {
                 return {
                     status: 500,
-                    message: errorMessage(error) 
+                    message: errorMessage(error)
                 };
             }
         } catch (error) {
@@ -49,14 +49,14 @@ const DAO = {
 
                 return {
                     status: 200,
-                    message: "OK", 
-                    body: result 
+                    message: "OK",
+                    body: result
                 };
 
             } catch (error) {
                 return {
                     status: 500,
-                    message: errorMessage(error) 
+                    message: errorMessage(error)
                 };
             }
         } catch (error) {
@@ -82,7 +82,7 @@ const DAO = {
             } catch (error) {
                 return {
                     status: 500,
-                    message: errorMessage(error) 
+                    message: errorMessage(error)
                 };
             }
         } catch (error) {
@@ -108,7 +108,7 @@ const DAO = {
             } catch (error) {
                 return {
                     status: 500,
-                    message: errorMessage(error) 
+                    message: errorMessage(error)
                 };
             }
         } catch (error) {
