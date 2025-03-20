@@ -8,11 +8,16 @@ router.get("/", (req: Request, res: Response, next: NextFunction) => {
 })
 
 router.post("/create_user", async (req: Request, res: Response, next: NextFunction) => {
-    const data = req.body; 
+    const data = req.body;
 
-    const responseFromController = userController.createUser(data)
+    const responseFromController = await userController.createUser(data)
 
-    res.send(responseFromController)
+    res.send(responseFromController.message).status(responseFromController.status)
+})
+
+router.delete("/delete_user", async (req: Request, res: Response, next: NextFunction) => {
+    //
+    // 
 })
 
 export default router; 

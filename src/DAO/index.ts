@@ -19,7 +19,7 @@ const DAO = {
 
             try {
                 await sequelize.query(query, { type: QueryTypes.INSERT });
-
+                
                 return {
                     status: 201,
                     message: "Data entered successfully"
