@@ -8,7 +8,7 @@ interface User {
     user_type: UserType; 
     name: string; 
     email: string; 
-    password: string; 
+    password_hash: string; 
     document_number: string;  
     created_at?: Date; 
 }
@@ -35,11 +35,11 @@ class UserModel {
     }
 
     get password() { 
-        return this.props.password; 
+        return this.props.password_hash; 
     }
 
     get document_number() { 
-        return this.props.name; 
+        return this.props.document_number; 
     }
 
     get created_at() { 

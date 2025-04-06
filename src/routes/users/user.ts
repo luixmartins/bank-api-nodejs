@@ -20,4 +20,12 @@ router.delete("/delete_user", async (req: Request, res: Response, next: NextFunc
     // 
 })
 
+router.post("/login", async (req: Request, res: Response, next: NextFunction) => {
+    const data = req.body;
+
+    const responseFromController = await userController.loginUser(data)
+
+    res.send(responseFromController).status(responseFromController.status)
+})
+
 export default router; 
