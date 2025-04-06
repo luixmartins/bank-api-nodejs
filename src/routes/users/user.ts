@@ -1,5 +1,6 @@
 import { Router, Request, Response, NextFunction, response } from "express"
 import userController from "../../controller/users/userController";
+import authenticated from "../../middlewares/authenticated";
 
 const router = Router();
 
@@ -27,5 +28,9 @@ router.post("/login", async (req: Request, res: Response, next: NextFunction) =>
 
     res.send(responseFromController).status(responseFromController.status)
 })
+
+router.get("/profile", authenticated, async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    res.send("I'm at the profile route.")
+});
 
 export default router; 
