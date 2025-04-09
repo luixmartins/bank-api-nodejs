@@ -4,14 +4,10 @@ import Passwords from "../../util/passwords";
 import sequelize from "../../config/database";
 import Auth from "../../services/auth";
 
-interface ResponseController {
-    status: Number,
-    message?: string,
-    body?: Object
-}
+import ResponseController from "../../controller/util";
 
 const userController = {
-    async createUser(data: any) {
+    async createUser(data: any): Promise<ResponseController> {
         if (!Passwords.validatePasswords(data.password)) {
             return {
                 status: 400,
@@ -47,7 +43,7 @@ const userController = {
         }
     },
 
-    async deleteUser(id: number) {
+    async deleteUser(id: number): Promise<ResponseController> {
         try {
             await sequelize.authenticate()
 
@@ -63,7 +59,7 @@ const userController = {
         }
     },
 
-    async loginUser(data: any) {
+    async loginUser(data: any): Promise<ResponseController> {
         try {
             await sequelize.authenticate()
 

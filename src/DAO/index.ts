@@ -13,12 +13,12 @@ const errorMessage = (error: any) => {
 }
 
 const DAO = {
-    async insertData(query: string): Promise<ResponseFromDatabase> {
+    async insertData(query: string, values?: any[]): Promise<ResponseFromDatabase> {
         try {
             await sequelize.authenticate();
 
             try {
-                await sequelize.query(query, { type: QueryTypes.INSERT });
+                await sequelize.query(query, { replacements: values, type: QueryTypes.INSERT });
                 
                 return {
                     status: 201,

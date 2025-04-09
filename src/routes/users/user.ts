@@ -13,7 +13,7 @@ router.post("/create_user", async (req: Request, res: Response, next: NextFuncti
 
     const responseFromController = await userController.createUser(data)
 
-    res.send(responseFromController.message).status(responseFromController.status)
+    res.send(responseFromController.message).status(responseFromController.status.valueOf())
 })
 
 router.delete("/delete_user", async (req: Request, res: Response, next: NextFunction) => {
@@ -26,7 +26,7 @@ router.post("/login", async (req: Request, res: Response, next: NextFunction) =>
 
     const responseFromController = await userController.loginUser(data)
 
-    res.send(responseFromController).status(responseFromController.status)
+    res.send(responseFromController).status(responseFromController.status.valueOf())
 })
 
 router.get("/profile", authenticated, async (req: Request, res: Response, next: NextFunction): Promise<void> => {
