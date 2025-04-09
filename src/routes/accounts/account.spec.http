@@ -1,0 +1,12 @@
+GET http://localhost:3000/account
+Content-Type: 'application/json' 
+
+###
+
+POST http://localhost:3000/account/new_account
+Content-Type: 'application/json'
+
+{ 
+    "account_type": "CORRENTE",
+    "users_id": 21, 
+}

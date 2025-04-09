@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import cors from 'cors'; 
 
 import userRouter from "../routes/users/user"; 
+import accountRouter from "../routes/accounts/account";
 
 dotenv.config();
 
@@ -15,6 +16,7 @@ app.use(express.json());
 
 // Routes 
 app.use("/user", userRouter); 
+app.use("/account", accountRouter); 
 
 app.get('/', (req, res) => { 
     res.send("Hello World!!!")
